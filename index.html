@@ -18,11 +18,19 @@
                 name: 'Crystal',
                 age: '30'
             }
+            handleClick(e) {
+                console.log(e.target);
+            }
+            handleCopy(e) {
+                console.log("Try being original for once")
+            }
             render() {
                 return(
                     <div className="app-content">
                         <h1>Hello World!</h1>
                         <p>My name is {this.state.name} and my age is {this.state.age} years.</p>
+                        <button onClick={this.handleClick} > Click Me </button>
+                        <p onCopy={this.handleCopy} > We are what we think! </p>
                     </div>
                 )
             }
