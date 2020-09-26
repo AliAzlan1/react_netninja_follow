@@ -18,10 +18,14 @@
                 name: 'Crystal',
                 age: '30'
             }
-            handleClick(e) {
+            handleClick = (e) => {
+                this.setState({
+                    name: 'Azlan',
+                    age: '20'
+                })
                 console.log(e.target);
             }
-            handleCopy(e) {
+            handleCopy = (e) => {
                 console.log("Try being original for once")
             }
             render() {
