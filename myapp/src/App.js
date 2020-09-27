@@ -4,8 +4,8 @@ import Ninjas from './Ninjas'
 class App extends React.Component {
   state = {
     ninjas: [
-      { name:'Ifa', age:0, belt:'cat', id:1 },
-      { name:'Iira', age:1, belt:'cat', id:2 },
+      { name:'Ifa', age:20, belt:'cat', id:1 },
+      { name:'Iira', age:5, belt:'cat', id:2 },
       { name:'lan', age:2, belt:'cat', id:3 },
     ]
   }
