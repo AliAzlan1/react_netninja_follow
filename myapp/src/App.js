@@ -5,9 +5,9 @@ import AddNinja from './AddNinja'
 class App extends React.Component {
   state = {
     ninjas: [
-      { name:'Ifa', age:20, belt:'cat', id:1 },
-      { name:'Iira', age:5, belt:'cat', id:2 },
-      { name:'lan', age:2, belt:'cat', id:3 },
+      { name: 'Ifa', age: 20, belt: 'cat', id: 1 },
+      { name: 'Iira', age: 5, belt: 'cat', id: 2 },
+      { name: 'lan', age: 2, belt: 'cat', id: 3 },
     ]
   }
   addNinja = (ninja) => {
@@ -17,11 +17,20 @@ class App extends React.Component {
       ninjas: ninjas
     })
   }
+  deleteNinja = (id) => {
+    // console.log(id);
+    let ninjas = this.state.ninjas.filter( ninja => {
+      return ninja.id !== id;
+    });
+    this.setState({
+      ninjas: ninjas
+    });
+  }
   render(){
     return (
       <div className="App">
         <h1>Welcome to the home page!</h1>
-        <Ninjas ninjas={this.state.ninjas} />
+        <Ninjas deleteNinja={this.deleteNinja} ninjas={this.state.ninjas} />
         <AddNinja addNinja={this.addNinja}/>
       </div>
     );
