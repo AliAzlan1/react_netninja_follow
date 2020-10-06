@@ -1,6 +1,7 @@
 import React from 'react';
+import Raibow from '../hoc/Rainbow';
 
-const About = () => {
+const About = (props) => {
     return(
         <div className="container">
             <h4 className="center">About</h4>
@@ -9,4 +10,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Raibow(About);
