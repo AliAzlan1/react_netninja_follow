@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-//link vs Navlink: Navlink has 'active' as class while link does not have
-const Navbar = () => {
+import { Link, NavLink, withRouter } from 'react-router-dom';
+
+const Navbar = (props) => {
+    setTimeout(() => {
+        props.history.push('/about');
+    }, 2000);
     return(
         <nav className="nav-wrapper red darken-3">
             <div className="container">
@@ -16,4 +19,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default withRouter(Navbar);
